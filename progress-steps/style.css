@@ -1,3 +1,8 @@
+:root {
+    --line-border-fill: #AF3B2B;
+    --line-border-empty: #E0E0E0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +33,7 @@ body {
 
 .progress-container::before {
     content: "";
-    background-color: #E0E0E0;
+    background-color: var(--line-border-empty);
     position: absolute;
     top: 50%;
     left: 0;
@@ -39,7 +44,7 @@ body {
 }
 
 .progress {
-    background-color: #AF3B2B;
+    background-color: var(--line-border-fill);
     position: absolute;
     top: 50%;
     left: 0;
@@ -51,5 +56,30 @@ body {
 }
 
 .circle {
-    
+    background-color: #FFF;
+    color: #202020;
+    border-radius: 50%;
+    width: 30px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+    transition: 0.4s ease;
+}
+
+.circle.active {
+    border-color: var(--line-border-fill);
+}
+
+.btn {
+    background-color: var(--line-border-fill);
+    color: #FFF;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+    margin: 5px;
+    font-size: 14px;
 }
