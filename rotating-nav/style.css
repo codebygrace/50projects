@@ -19,14 +19,18 @@ ul {
 .container {
     background-color: #FAFAFA;
     transform-origin: top left;
-    transition: transfrom 0.5s linear;
     width: 100vw;
     min-height: 100vh;
-    padding: 4rem;
+    padding: 2rem;
+    transition: transform 0.5s linear;
 }
 
 .container.show-nav {
-    transform: rotate(-20deg);
+    transform: rotate(-30deg);
+}
+
+.container.show-nav .circle {
+    transform: rotate(-70deg);
 }
 
 .circle-container {
@@ -45,6 +49,7 @@ ul {
 }
 
 .circle .btn {
+    cursor: pointer;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -75,7 +80,7 @@ ul {
 
 .content {
     max-width: 1000px;
-    margin: 4rem auto;
+    margin: 3rem auto;
 }
 
 .author {
